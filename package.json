@@ -1,0 +1,19 @@
+{
+  "name": "qa-agent-worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Runs QA Agent test runs in a real browser and reports findings back to qa-agent-backend.",
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "test": "node --test test/",
+    "setup": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
